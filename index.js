@@ -16,7 +16,8 @@ const changeInput = (e) => {
   input = +input  
 }
 
-const checkNumber = (i, r) => {
+const checkNumber = (e, i, r) => {
+  e.preventDefault()
   i < 1 ?  alert('Input field is empty!') : null
   console.log(i, r)
   if(!isNaN(i)){
@@ -59,4 +60,4 @@ const congratsColor = () => {
 
 
 inputEl.addEventListener('input', (e) => changeInput(e))
-submitButton.addEventListener('click', ()=> {checkNumber(input, randomNumer)})
+submitButton.addEventListener('click', (e)=> {checkNumber(e,input, randomNumer)})
